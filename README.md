@@ -1,6 +1,8 @@
 #Simple REST example, does not do much, just returns Hello World.
 ##Clone it from github
 ###With ssh credentials in place
+This is the nicer case, no need to provide a password or credentials
+```
 >git clone git@github.com:DavidLDawes/rest-dock.git
 Cloning into 'rest-dock'...
 remote: Counting objects: 68, done.
@@ -10,6 +12,7 @@ Receiving objects: 100% (68/68), 62.05 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (25/25), done.
 Checking connectivity... done.
 >
+```
 ###With https
 ```
 >git clone https://github.com/DavidLDawes/rest-dock.git
