@@ -63,7 +63,9 @@ docker ps
 CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 5dd2083181c4        virtualsoundnw/spring-boot-docker   "java -Djava.security"   18 seconds ago      Up 17 seconds       0.0.0.0:8080->8080/tcp   jolly_stallman
 ```
-In this case it's jolly_stallman, so we can us that to stop the container with a docker stop command
+In this case it's jolly_stallman
+###Stop the container using the name
+Use the docker stop command with the name reported via docker ps and it stops that container:
 ```
 >docker stop jolly_stallman
 jolly_stallman
