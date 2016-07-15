@@ -8,7 +8,62 @@ git clone https://github.com/DavidLDawes/rest-dock.git
 ##Once cloned, build it
 ```
 cd rest-dock
-./gradlew build buildDocker
+>./gradlew build buildDocker
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:findMainClass
+:jar
+:bootRepackage
+:assemble
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:check UP-TO-DATE
+:build
+:buildDocker
+Sending build context to Docker daemon  13.5 MB
+Step 1 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> 3f6e317fc0fb
+Step 2 : VOLUME /tmp
+ ---> Using cache
+ ---> 5c8c6bc8814b
+Step 3 : ADD spring-boot-docker-0.1.0.jar spring-boot-docker-0.1.0.jar
+ ---> b8781d2c7e5e
+Removing intermediate container 52dc4fd2b51c
+Step 4 : RUN sh -c 'touch /spring-boot-docker-0.1.0.jar'
+ ---> Running in bd6600c48e23
+ ---> 4583e5dab718
+Removing intermediate container bd6600c48e23
+Step 5 : ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar /spring-boot-docker-0.1.0.jar
+ ---> Running in 61d283797774
+ ---> 9fb04e76e4a8
+Removing intermediate container 61d283797774
+Step 6 : MAINTAINER David Dawes "virtualsoundnw@gmail.com"
+ ---> Running in 7451dc748256
+ ---> 8f7e57bee851
+Removing intermediate container 7451dc748256
+Successfully built 8f7e57bee851
+
+The push refers to a repository [docker.io/virtualsoundnw/spring-boot-docker]
+09d5649ca160: Preparing
+717baf11b63b: Preparing
+5c729c0f03b0: Preparing
+017f469bdc32: Preparing
+4fe15f8d0ae6: Preparing
+4fe15f8d0ae6: Layer already exists
+5c729c0f03b0: Layer already exists
+017f469bdc32: Layer already exists
+717baf11b63b: Pushed
+09d5649ca160: Pushed
+latest: digest: sha256:db691455b9813ce886bbec3e867e637b80c24437974aab4b6ec9f91130a98b01 size: 1375
+
+
+BUILD SUCCESSFUL
+
+Total time: 45.036 secs
+>
 ```
 Assuming everything cloned and built properly you should find the fresh image in docker using the images command.
 ```
@@ -20,7 +75,7 @@ virtualsoundnw/spring-boot-docker         latest              575743b06589      
 ##Launch it in Docker
 The image can be used to run it, for this case remember to map the port through
 ```
-docker run -p 8080:8080 virtualsoundnw/spring-boot-docker
+>docker run -p 8080:8080 virtualsoundnw/spring-boot-docker
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
