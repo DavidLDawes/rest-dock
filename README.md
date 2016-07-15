@@ -11,10 +11,10 @@ cd rest-dock
 ./gradlew build buildDocker
 ```
 Assuming everything cloned and built properly you should find the fresh image in docker using the images command.
-'''
+```
 \>docker images
 REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
 virtualsoundnw/spring-boot-docker         latest              575743b06589        38 seconds ago      193.8 MB
 \>
-'''
+```
 ##Launch it in Docker
