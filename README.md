@@ -18,3 +18,9 @@ virtualsoundnw/spring-boot-docker         latest              575743b06589      
 \>
 ```
 ##Launch it in Docker
+The image can be used to run it, for this case remember to map the port through
+```
+docker run -p 8080:8080 virtualsoundnw/spring-boot-docker
+```
+##Check that it works
+Bring up localhost:8080 in your browser and you should see Hello Docker World.
