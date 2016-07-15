@@ -10,4 +10,4 @@ git clone https://github.com/DavidLDawes/rest-dock.git
 cd rest-dock
 ./gradlew build buildDocker
 ```
-
+##Launch it in Docker
