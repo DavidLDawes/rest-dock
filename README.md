@@ -12,10 +12,10 @@ cd rest-dock
 ```
 Assuming everything cloned and built properly you should find the fresh image in docker using the images command.
 ```
-\>docker images
+>docker images
 REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
 virtualsoundnw/spring-boot-docker         latest              575743b06589        38 seconds ago      193.8 MB
-\>
+>
 ```
 ##Launch it in Docker
 The image can be used to run it, for this case remember to map the port through
