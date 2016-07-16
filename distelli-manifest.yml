@@ -1,0 +1,37 @@
+virtualsoundnw/rest-dock:
+  # This Basic Distelli Manifest assumes the following
+  # has been provisioned on the destination deploy server:
+  #
+  # OS: Ubuntu
+  # Installed Packages:
+  #   Java JRE >= 1.7   [sudo apt-get install default-jre]
+  #
+  # Set the JAVA_HOME (below) for your JRE install directory
+  #
+  # This also requires that the Java JDK be installed on
+  # the development server to compile the java code.
+  #
+  # There is a build.sh script to compile the code for you.
+  #
+
+  Env:
+    - CLASSPATH: 'build/*:target/*:lib/*'
+    #
+    # Set the JAVA_HOME below for the destination
+    # deployment server JRE directory.
+    #
+    - JAVA_HOME: "/usr/lib/jvm/default-java/jre"
+    #
+    - JVM_ARGS: '"-Duser.timezone=PST -Xmx128M -Xms128M"'
+    - PORT: "8080"
+    - ARGS: "-p $PORT:$PORT"
+    
+  Exec:
+    - exec docker run $ARGS virtualsoundnw/spring-boot-docker
+    #- exec $JAVA_HOME/bin/java -cp $CLASSPATH $JVM_ARGS com.virtualsoundnw $ARGS
+    
+  PkgInclude:
+    - build/*.jar
+    - target/*.jar
+    - lib/*.jar
+
