@@ -1,10 +1,23 @@
 #Simple REST example, does not do much, just returns Hello World.
 ##Clone it from github
 ###With ssh credentials in place
-git clone git@github.com:DavidLDawes/rest-dock.git
+This is the nicer case, no need to provide a password or credentials
+```
+>git clone git@github.com:DavidLDawes/rest-dock.git
+Cloning into 'rest-dock'...
+remote: Counting objects: 68, done.
+remote: Compressing objects: 100% (55/55), done.
+remote: Total 68 (delta 25), reused 45 (delta 5), pack-reused 0
+Receiving objects: 100% (68/68), 62.05 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (25/25), done.
+Checking connectivity... done.
+>
+```
 ###With https
-git clone https://github.com/DavidLDawes/rest-dock.git
-
+```
+>git clone https://github.com/DavidLDawes/rest-dock.git
+```
+Same as ssh except you have to provide the password
 ##Once cloned, build it
 ```
 cd rest-dock
