@@ -141,4 +141,7 @@ Use the docker stop command with the name reported via docker ps and it stops th
 jolly_stallman
 >
 ```
+##Push to Docker Hub
+docker push yourname/rest-dock
+This note hasn't been checked, needs work
 
