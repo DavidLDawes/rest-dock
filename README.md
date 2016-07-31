@@ -143,5 +143,5 @@ jolly_stallman
 ```
 ##Push to Docker Hub
 docker push yourname/rest-dock
-This note hasn't been checked, needs work
+This note hasn't been checked, still needs work
 
