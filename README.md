@@ -19,6 +19,8 @@ Checking connectivity... done.
 ```
 Same as ssh except you have to provide the password
 ##Once cloned, build it
+Note that Maven can be used via mvn install, but "mvn install" will only build the local .jar and add it to the Maven repository.
+To Do: add maven lifecycle for assembling a docker image locally
 ```
 cd rest-dock
 >./gradlew build buildDocker
