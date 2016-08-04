@@ -15,6 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 // tag::plugin[]
+apply plugin: 'application'
 apply plugin: 'docker'
 // end::plugin[]
 
